@@ -5,7 +5,12 @@ folder=$(basename "$dir")
 
 title="$(echo "$folder" | sed "s/\b[a-z]/\U&/g" | sed "s/-/ /g")"
 
-echo "# $title" > README.md
+if  [ -f README.md ]; then
+  echo "README.md exists"
+else
+  echo "# $title" > README.md
+  echo "README.md is created"
+fi
 
 # Check if at least one argument was provided
 if [ $# -eq 0 ]; then
