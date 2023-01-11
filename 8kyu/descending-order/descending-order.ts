@@ -1,4 +1,4 @@
-export function descendingOrder(n: number): any {
+export function descendingOrder(n: number): number {
 	const res = [...`${n}`]
 		.map(Number)
 		.sort((a, b) => b - a)

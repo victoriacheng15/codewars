@@ -1,0 +1,35 @@
+name: Update README
+
+on:
+  schedule:
+    - cron: "0 9 * * 5"
+
+jobs:
+  update-markdown:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkot
+        uses: actions/checkout@v3
+      - name: setup node
+        uses: actions/setup-node@v3
+      - name: create branch
+        run: git switch -c update-readme
+        shell: bash
+      - name: Update README
+        run: node updateMarkdown.js
+      - name: Commit and push
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions"
+          git add README.md
+          git commit -m "Update README"
+          git push origin update-readme
+        shell: bash
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: update-readme
+          BASE: main
+          TITLE: "Update README"
+          BODY: "Automatic update of README on a weekly basis"

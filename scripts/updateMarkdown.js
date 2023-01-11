@@ -1,22 +1,27 @@
-const fs = require('fs/promises');
+const fs = require("fs/promises");
 
 const fetchUser = async () => {
-  const url = 'https://www.codewars.com/api/v1/users/victoriacheng15';
-  try {
-    const res = await fetch(url);
-    const data = await res.json();
-    return data;
-  } catch (error) {
-    console.log(error);
-  }
+	const url = "https://www.codewars.com/api/v1/users/victoriacheng15";
+	try {
+		const res = await fetch(url);
+		const data = await res.json();
+		return data;
+	} catch (error) {
+		console.log(error);
+	}
 };
 
 const updateMarkdown = async () => {
-  try {
-    const user = await fetchUser();
-    console.log(user);
-    console.log(user.ranks.languages);
-    const markdown = `# Codewars
+	try {
+		const user = await fetchUser();
+		const lang = Object.entries(user.ranks.languages);
+		const sorted = lang.sort((a, b) => b[1].score - a[1].score);
+		const res = sorted.map(([lang, {name, color, score}]) => {
+			return `| ${lang} | ${name} | ${color} | ${score} |`;
+		}).join('\n');
+
+		console.log(res);
+		    const markdown = `# Codewars
 
 This is a repo that contains all my solutions
 
@@ -26,17 +31,15 @@ This is a repo that contains all my solutions
 
 Total Challenges Completed: ${user.codeChallenges.totalCompleted}
 
-Languages:
+|  Language  | Rank  | Color  | Score |
+| :--------: | :---: | :----: | :---: |
+${res}
+		        `;
 
-${Object.keys(user.ranks.languages)
-  .map((lang) => `- ${lang}`)
-  .join('\n')}
-        `;
-
-    await fs.writeFile('README.md', markdown);
-  } catch (error) {
-    console.log(error);
-  }
+     await fs.writeFile('README.md', markdown);
+	} catch (error) {
+		console.log(error);
+	}
 };
 
 updateMarkdown();
