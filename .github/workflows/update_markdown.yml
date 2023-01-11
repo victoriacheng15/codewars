@@ -17,7 +17,7 @@ jobs:
         run: git switch -c update-readme
         shell: bash
       - name: Update README
-        run: node updateMarkdown.js
+        run: node scripts/updateMarkdown.js
       - name: Commit and push
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
