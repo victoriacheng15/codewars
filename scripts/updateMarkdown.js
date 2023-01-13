@@ -1,11 +1,11 @@
 const fs = require("fs/promises");
+const axios = require("axios")
 
 const fetchUser = async () => {
 	const url = "https://www.codewars.com/api/v1/users/victoriacheng15";
 	try {
-		const res = await fetch(url);
-		const data = await res.json();
-		return data;
+		const res = await axios.get(url);
+		return res.data;
 	} catch (error) {
 		console.log(error);
 	}
