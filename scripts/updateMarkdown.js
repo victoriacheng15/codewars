@@ -15,25 +15,28 @@ const updateMarkdown = async () => {
 	try {
 		const user = await fetchUser();
 		const lang = Object.entries(user.ranks.languages);
-		const sorted = lang.sort((a, b) => b[1].score - a[1].score);
-		const res = sorted.map(([lang, {name, color, score}]) => {
+		const sortedByScores = lang.sort((a, b) => b[1].score - a[1].score);
+		const displayTable = sortedByScores.map(([lang, {name, color, score}]) => {
 			return `| ${lang} | ${name} | ${color} | ${score} |`;
 		}).join('\n');
 
-		console.log(res);
-		    const markdown = `# Codewars
+		console.log(displayTable);
 
-This is a repo that contains all my solutions
+		const markdown = `# Codewars
 
-> Note: please try to complete problems yourselves before look up solutions!
+This is my collection of solutions repo for codewars
 
-## Details
+> Note: Strongly encouraged not to look at my solutions to kata until you have completed it yourselves or at least took the time to think about your own approaches!
+
+## Profile
+
+### Progress
 
 Total Challenges Completed: ${user.codeChallenges.totalCompleted}
 
 |  Language  | Rank  | Color  | Score |
 | :--------: | :---: | :----: | :---: |
-${res}
+${displayTable}
 		        `;
 
      await fs.writeFile('README.md', markdown);
