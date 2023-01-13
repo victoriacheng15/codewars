@@ -10,8 +10,9 @@ Total Challenges Completed: 455
 
 |  Language  | Rank  | Color  | Score |
 | :--------: | :---: | :----: | :---: |
-| javascript | 3 kyu |  blue  | 2059  |
-| typescript | 5 kyu | yellow |  240  |
-|   python   | 7 kyu | white  |  65   |
-|     go     | 7 kyu | white  |  32   |
-|    sql     | 8 kyu | white  |   8   |
+| javascript | 3 kyu | blue | 2061 |
+| typescript | 5 kyu | yellow | 246 |
+| python | 7 kyu | white | 75 |
+| go | 7 kyu | white | 36 |
+| sql | 8 kyu | white | 8 |
+		        
