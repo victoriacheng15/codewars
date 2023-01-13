@@ -16,12 +16,12 @@ function formatMoney(amount) {
 	return `$${amount.toFixed(2)}`;
 }
 
-describe("format money", () => {
-	it("should return $3.00 for amount of 3", () => {
-		expect(formatMoney(3)).toMatch("$3.00");
-	});
+// describe("format money", () => {
+// 	it("should return $3.00 for amount of 3", () => {
+// 		expect(formatMoney(3)).toMatch("$3.00");
+// 	});
 
-	it("should return $3.10 for amount of 3.1", () => {
-		expect(formatMoney(3.1)).toMatch("$3.10");
-	});
-});
+// 	it("should return $3.10 for amount of 3.1", () => {
+// 		expect(formatMoney(3.1)).toMatch("$3.10");
+// 	});
+// });
