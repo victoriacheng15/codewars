@@ -11,8 +11,17 @@ jobs:
     steps:
       - name: checkot
         uses: actions/checkout@v3
+      - name: pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
       - name: setup node
         uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "pnpm"
+      - name: install axios
+        run: pnpm install axios
       - name: create branch
         run: git switch -c update-readme
         shell: bash
