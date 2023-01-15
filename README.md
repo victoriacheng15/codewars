@@ -1,18 +1,20 @@
 # Codewars
 
-This is a repo that contains all my solutions
+This is my collection of solutions repo for codewars
 
-> Note: please try to complete problems yourselves before look up solutions!
+> Note: Strongly encouraged not to look at my solutions to kata until you have completed it yourselves or at least took the time to think about your own approaches!
 
-## Details
+## Profile
+
+### Progress
 
 Total Challenges Completed: 455
 
 |  Language  | Rank  | Color  | Score |
 | :--------: | :---: | :----: | :---: |
 | javascript | 3 kyu | blue | 2061 |
-| typescript | 5 kyu | yellow | 246 |
-| python | 7 kyu | white | 75 |
-| go | 7 kyu | white | 36 |
-| sql | 8 kyu | white | 8 |
+| typescript | 5 kyu | yellow | 248 |
+| python | 6 kyu | yellow | 81 |
+| go | 7 kyu | white | 40 |
+| sql | 8 kyu | white | 12 |
 		        
