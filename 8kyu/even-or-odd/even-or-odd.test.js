@@ -1,11 +1,11 @@
 import { describe, it, expect } from "vitest";
 
-export function even_or_odd(n: number): string {
-	return n % 2 === 0 ? "Even" : "Odd";
+function even_or_odd(number) {
+	return number % 2 === 0 ? "Even" : "Odd";
 }
 
 describe("even or odd", () => {
-	const cases: [number, string][] = [
+	const cases = [
 		[2, "Even"],
 		[0, "Even"],
 		[7, "Odd"],
