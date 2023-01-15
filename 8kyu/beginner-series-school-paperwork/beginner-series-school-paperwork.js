@@ -1,4 +1,3 @@
-
 /* 
 PREP:
 - check if n and m is above 0

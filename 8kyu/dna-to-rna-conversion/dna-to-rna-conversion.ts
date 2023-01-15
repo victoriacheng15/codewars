@@ -4,8 +4,7 @@ export function DNAtoRNA(dna: string): string {
 		U: "T",
 	};
 
-  return [...dna].map(char => swap[char] ? swap[char] : char).join('')
+	return [...dna].map((char) => (swap[char] ? swap[char] : char)).join("");
 }
 
-
-console.log(DNAtoRNA("GCAT"))
+console.log(DNAtoRNA("GCAT"));

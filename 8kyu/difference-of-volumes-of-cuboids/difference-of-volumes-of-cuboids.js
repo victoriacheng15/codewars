@@ -1,5 +1,5 @@
 function findDifference(a, b) {
-  const cubeVolume = arr => arr.reduce((total, num) => total *= num, 1)
+	const cubeVolume = (arr) => arr.reduce((total, num) => (total *= num), 1);
 
-  return Math.abs(cubeVolume(a) - cubeVolume(b))
+	return Math.abs(cubeVolume(a) - cubeVolume(b));
 }

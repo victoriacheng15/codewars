@@ -1,3 +1,3 @@
-export const booleanToString = (b:boolean):string => {
-  return b ? "true" : "false"
+export const booleanToString = (b: boolean): string => {
+	return b ? "true" : "false";
 };
