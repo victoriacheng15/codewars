@@ -1,4 +1,4 @@
-function expressionMatter(a, b, c) {
+export function expressionsMatter(a: number, b: number, c: number): number {
 	const arr = [
 		a + b + c,
 		a * b * c,
@@ -7,6 +7,7 @@ function expressionMatter(a, b, c) {
 		a + b * c,
 		(a + b) * c,
 	];
+
 	return Math.max(...arr);
 }
 

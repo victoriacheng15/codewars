@@ -1,16 +1,16 @@
 String.prototype.toAlternatingCase = function () {
-  let str = ''
+	let str = "";
 
-  for(const char of this) {
-    if(char === char.toUpperCase()) {
-      str += char.toLowerCase()
-    } else {
-      str += char.toUpperCase()
-    }
-  }
+	for (const char of this) {
+		if (char === char.toUpperCase()) {
+			str += char.toLowerCase();
+		} else {
+			str += char.toUpperCase();
+		}
+	}
 
-  return str
-}
+	return str;
+};
 
 // describe('alternating case', () => {
 //   const cases = [

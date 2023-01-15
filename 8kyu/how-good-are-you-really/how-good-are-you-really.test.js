@@ -11,7 +11,8 @@ Your points are not included in the array of your class's points. For calculatin
 */
 
 function betterThanAverage(classPoints, yourPoints) {
-	const average = classPoints.reduce((acc, curr) => acc + curr, 0) / classPoints.length;
+	const average =
+		classPoints.reduce((acc, curr) => acc + curr, 0) / classPoints.length;
 	return average < yourPoints;
 }
 
