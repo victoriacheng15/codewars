@@ -1,17 +1,10 @@
-/* 
-When provided with a letter, return its position in the alphabet.
-
-Input :: "a"
-
-Ouput :: "Position of alphabet: 1"
-*/
-
 import { describe, it, expect } from "vitest";
 
-export function position(alphabet: string): string {
-	const pos = alphabet.charCodeAt(0) - 96;
-	return `Position of alphabet: ${pos}`;
+function position(letter){
+  const pos = letter.charCodeAt(0) - 96;
+  return `Position of alphabet: ${pos}`
 }
+
 
 describe("find the position of alphabet", () => {
 	const cases = [
