@@ -1,7 +1,8 @@
-/* 
+# Find Out Whether The Shape Is A Cube
+
 To find the volume (centimeters cubed) of a cuboid you use the formula:
 
-volume = Length * Width * Height
+volume = Length _ Width _ Height
 
 But someone forgot to use proper record keeping, so we only have the volume, and the length of a single side!
 
@@ -12,21 +13,3 @@ Return true if the cuboid could have equal sides, return false otherwise.
 Return false for invalid numbers too (e.g volume or side is less than or equal to 0).
 
 Note: the sides must be integers
-*/
-
-import { describe, it, expect } from "vitest";
-
-const cubeChecker = function (volume, side) {
-	if (side <= 0) return false;
-	return volume === side ** 3;
-};
-
-describe("cube checker", () => {
-	it("should return a boolean value", () => {
-		expect(cubeChecker(8, 3)).toBe(false);
-	});
-
-	it("should return a boolean value", () => {
-		expect(cubeChecker(8, 2)).toBe(true);
-	});
-});
