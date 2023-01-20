@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 
-function main(verb, noun) {
-	return verb + noun;
+export function main (verb: string, noun: string): string {
+  return verb + noun
 }
 
 describe("check function syntax", () => {
