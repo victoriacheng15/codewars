@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 
-function move(position, roll) {
-	return position + roll * 2;
+export function move(pos: number, roll: number): number {
+  return pos + roll * 2
 }
 
 describe("terminal game move", () => {
