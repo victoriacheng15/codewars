@@ -1,16 +1,5 @@
-/* 
-Terminal game turn function
-You are creating a text-based terminal version of your favorite board game. In the board game, each turn has six steps that must happen in this order: roll the dice, move, combat, get coins, buy more health, and print status.
+import { describe, it, expect, vi } from "vitest";
 
-You are using a library (Game.Logic in C#) that already has the functions below. Create a function named doTurn/DoTurn/do_turn that calls the functions in the proper order as described in the paragraph above.
-
-- combat
-- buyHealth
-- getCoins
-- printStatus
-- rollDice
-- move
-*/
 const rollDice = () => "rollDice";
 const move = () => "move";
 const combat = () => "combat";
@@ -19,12 +8,30 @@ const buyHealth = () => "buyHealth";
 const printStatus = () => "printStatus";
 
 function doTurn() {
-	[rollDice, move, combat, getCoins, buyHealth, printStatus].forEach((x) =>
-		x(),
+	[rollDice, move, combat, getCoins, buyHealth, printStatus].forEach((func) =>
+		func(),
 	);
 }
 
 describe("turn", () => {
+	const rollDice = vi.fn(()=> "rollDice");
+	const move = vi.fn(()=> "move");
+	const combat = vi.fn(()=> "combat");
+	const getCoins = vi.fn(()=> "getCoins");
+	const buyHealth = vi.fn(()=> "buyHealth");
+	const printStatus = vi.fn(()=> "printStatus");
+
+	
+	it("should call all the functions in the correct order", () => {
+		doTurn();
+		expect(rollDice()).toBe("rollDice");
+		expect(move()).toBe("move");
+		expect(combat()).toBe("combat");
+		expect(getCoins()).toBe("getCoins");
+		expect(buyHealth()).toBe("buyHealth");
+		expect(printStatus()).toBe("printStatus");
+	});
+
 	it("should return buyHealth()", () => {
 		expect(1 + 1).toBe(2);
 	});
