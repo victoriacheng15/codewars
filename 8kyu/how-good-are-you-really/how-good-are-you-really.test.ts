@@ -1,13 +1,15 @@
 import { describe, it, expect } from "vitest";
 
-function betterThanAverage(classPoints, yourPoints) {
-	const average =
-		classPoints.reduce((acc, curr) => acc + curr, 0) / classPoints.length;
-	return average < yourPoints;
+export function betterThanAverage(
+	classPoints: number[],
+	yourPoints: number,
+): boolean {
+  const avg = classPoints.reduce((a, b) => a + b, 0) / classPoints.length;
+	return avg < yourPoints;
 }
 
 describe("better than average", () => {
-	const cases = [
+	const cases: [number[], number, boolean][] = [
 		[[2, 3], 5, true],
 		[[100, 40, 34, 57, 29, 72, 57, 88], 75, true],
 		[[41, 75, 72, 56, 80, 82, 81, 33], 50, false],
