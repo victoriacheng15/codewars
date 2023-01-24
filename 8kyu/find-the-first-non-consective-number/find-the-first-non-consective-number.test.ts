@@ -1,8 +1,8 @@
 import { describe, it, expect } from "vitest";
 
 export function firstNonConsecutive(arr: number[]): null | number {
-	const result = arr.find((num, index) => num !== index + arr[0])
-  return result !== undefined && Number.isInteger(result) ? result : null
+	const result = arr.find((num, index) => num !== index + arr[0]);
+	return result !== undefined && Number.isInteger(result) ? result : null;
 }
 
 describe("find first non consective number", () => {

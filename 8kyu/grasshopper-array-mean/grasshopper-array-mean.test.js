@@ -18,7 +18,7 @@ describe("findAverage", () => {
 		[[1, 3, 5, 7], 4],
 	];
 
-	for(const [nums, output] of tests) {
+	for (const [nums, output] of tests) {
 		it(`should return ${output} when given ${nums}`, () => {
 			expect(findAverage(nums)).toBe(output);
 		});

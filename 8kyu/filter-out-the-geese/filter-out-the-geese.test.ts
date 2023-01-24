@@ -29,15 +29,12 @@ describe("goose filter", () => {
 			["Mallard", "Barbary", "Hook Bill", "Blue Swedish", "Crested"],
 			["Mallard", "Barbary", "Hook Bill", "Blue Swedish", "Crested"],
 		],
-		[
-			["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"],
-			[],
-		],
+		[["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"], []],
 	];
 
-  for(const [input, output] of tests) {
-    it(`should return [${output}] when input = [${input}]`, () => {
-      expect(gooseFilter(input)).toEqual(output)
-    })
-  }
+	for (const [input, output] of tests) {
+		it(`should return [${output}] when input = [${input}]`, () => {
+			expect(gooseFilter(input)).toEqual(output);
+		});
+	}
 });

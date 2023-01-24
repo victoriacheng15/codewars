@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 
 export function getGrade(...grades: number[]): string {
-  const avg = [...grades].reduce((a, b) => a + b) / grades.length;
+	const avg = [...grades].reduce((a, b) => a + b) / grades.length;
 	if (avg >= 90) return "A";
 	if (avg >= 80 && avg < 90) return "B";
 	if (avg >= 70 && avg < 80) return "C";
@@ -10,7 +10,7 @@ export function getGrade(...grades: number[]): string {
 }
 
 describe("getGrade", () => {
-	const tests: [string, number, number, number][]= [
+	const tests: [string, number, number, number][] = [
 		["A", 95, 90, 93],
 		["B", 82, 85, 87],
 		["C", 75, 70, 79],
@@ -18,7 +18,7 @@ describe("getGrade", () => {
 		["F", 44, 55, 52],
 	];
 
-	for(const [expected, ...grades] of tests) {
+	for (const [expected, ...grades] of tests) {
 		it(`(${grades}) = ${expected}`, () => {
 			expect(getGrade(...grades)).toBe(expected);
 		});

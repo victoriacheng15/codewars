@@ -10,7 +10,7 @@ describe("greet", () => {
 		expect(greet("Daniel", "Daniel")).toBe("Hello boss");
 	});
 
-  it("should return hello guest", () => {
-    expect(greet("Greg", "Daniel")).toBe("Hello guest");
-  })
+	it("should return hello guest", () => {
+		expect(greet("Greg", "Daniel")).toBe("Hello guest");
+	});
 });

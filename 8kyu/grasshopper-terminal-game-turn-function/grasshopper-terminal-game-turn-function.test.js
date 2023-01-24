@@ -14,14 +14,13 @@ function doTurn() {
 }
 
 describe("turn", () => {
-	const rollDice = vi.fn(()=> "rollDice");
-	const move = vi.fn(()=> "move");
-	const combat = vi.fn(()=> "combat");
-	const getCoins = vi.fn(()=> "getCoins");
-	const buyHealth = vi.fn(()=> "buyHealth");
-	const printStatus = vi.fn(()=> "printStatus");
+	const rollDice = vi.fn(() => "rollDice");
+	const move = vi.fn(() => "move");
+	const combat = vi.fn(() => "combat");
+	const getCoins = vi.fn(() => "getCoins");
+	const buyHealth = vi.fn(() => "buyHealth");
+	const printStatus = vi.fn(() => "printStatus");
 
-	
 	it("should call all the functions in the correct order", () => {
 		doTurn();
 		expect(rollDice()).toBe("rollDice");

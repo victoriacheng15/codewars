@@ -18,7 +18,7 @@ describe("getGrade", () => {
 		["F", 44, 55, 52],
 	];
 
-	for(const [expected, ...grades] of tests) {
+	for (const [expected, ...grades] of tests) {
 		it(`(${grades}) = ${expected}`, () => {
 			expect(getGrade(...grades)).toBe(expected);
 		});

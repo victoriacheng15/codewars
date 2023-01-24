@@ -1,10 +1,9 @@
 import { describe, it, expect } from "vitest";
 
-function position(letter){
-  const pos = letter.charCodeAt(0) - 96;
-  return `Position of alphabet: ${pos}`
+function position(letter) {
+	const pos = letter.charCodeAt(0) - 96;
+	return `Position of alphabet: ${pos}`;
 }
-
 
 describe("find the position of alphabet", () => {
 	const cases = [

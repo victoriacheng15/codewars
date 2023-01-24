@@ -12,8 +12,8 @@ describe("find the reminder", () => {
 		[[17, 5], 2],
 		[[13, 72], 7],
 	];
-	
-	for(const [n, m] of tests) {
+
+	for (const [n, m] of tests) {
 		it(`should return ${remainder(n, m)}`, () => {
 			expect(remainder(n, m)).toBe(remainder(n, m));
 		});

@@ -4,7 +4,7 @@ export function cubeChecker(volume: number, side: number): boolean {
 	// if (side <= 0) return false;
 	// return volume === side ** 3;
 
-  return side <= 0 ? false : volume === side ** 3
+	return side <= 0 ? false : volume === side ** 3;
 }
 
 describe("cube checker", () => {

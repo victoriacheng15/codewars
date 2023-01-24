@@ -1,9 +1,9 @@
 export const min = (list: number[]): number => {
-	return Math.min(...list)
+	return Math.min(...list);
 };
 
 export const max = (list: number[]): number => {
-	return Math.max(...list)
+	return Math.max(...list);
 };
 
 import { describe, it, expect } from "vitest";

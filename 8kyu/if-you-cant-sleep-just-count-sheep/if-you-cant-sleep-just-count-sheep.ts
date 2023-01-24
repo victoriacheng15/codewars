@@ -1,12 +1,12 @@
 export function countSheep(num: number): string {
-  let [res, index] = ["", 0];
+	let [res, index] = ["", 0];
 
-  while(index <= num) {
-    index === 0 ? '' : (res += `${index} sheep...`);
-    index++;
-  }
+	while (index <= num) {
+		index === 0 ? "" : (res += `${index} sheep...`);
+		index++;
+	}
 
-  return res;
+	return res;
 }
 
 // or use Array.from
