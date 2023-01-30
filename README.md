@@ -15,8 +15,8 @@ I have completed 455 challenges so far!
 |  Language  | Rank  | Color  | Score | Total Completed |
 | :--------: | :---: | :----: | :---: | :-------------: |
 | javascript | 3 kyu | blue | 2063 | 449 |
-| typescript | 5 kyu | yellow | 276 | 83 |
-| python | 6 kyu | yellow | 125 | 62 |
-| go | 7 kyu | white | 50 | 25 |
-| sql | 7 kyu | white | 22 | 11 |
+| typescript | 5 kyu | yellow | 306 | 98 |
+| python | 6 kyu | yellow | 173 | 86 |
+| go | 6 kyu | yellow | 76 | 38 |
+| sql | 7 kyu | white | 34 | 17 |
 		        
