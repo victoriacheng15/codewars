@@ -1,18 +1,20 @@
 import { describe, expect, it } from "vitest";
 
-// function nextId(ids) {
-//   let num = 0;
-//   while (ids.includes(num)) {
-//     num += 1;
-//   }
-//   return num;
-// }
-
-function nextId(ids) {
+export function nextId(ids: number[]): number {
 	const used = new Set(ids);
-	for (let i = 0; i <= ids.length; i += 1) {
-		if (!used.has(i)) return i;
-	}
+  let num = 0;
+
+  // while (used.has(num)) {
+  //   num++;
+  // }
+
+	for (const id of ids) {
+    if (id === num) {
+      num++;
+    }
+  }
+
+  return num;
 }
 
 describe("next id", () => {
