@@ -2,18 +2,20 @@ const fs = require("fs/promises");
 const axios = require("axios");
 
 const BASE_URL = "https://www.codewars.com/api/v1/users";
-const USER = "victoriacheng15"
+const USER = "victoriacheng15";
+const CODE_CHALLENGE = "code-challenges/completed"
 
 const fetchUserInfo = async () => {
 	const url = `${BASE_URL}/${USER}`;
+
 	try {
 		const res = await axios.get(url);
-		const userInfo = res.data;
+		const { ranks, codeChallenges } = res.data;
 
-		const languages = userInfo.ranks.languages;
+		const languages = ranks.languages;
 		const langs = Object.entries(languages);
 		const sortedByScores = langs.sort((a, b) => b[1].score - a[1].score);
-		const totalCompleted = userInfo.codeChallenges.totalCompleted;
+		const totalCompleted = codeChallenges.totalCompleted;
 
 		return { sortedByScores, totalCompleted };
 	} catch (error) {
@@ -24,7 +26,7 @@ const fetchUserInfo = async () => {
 fetchUserInfo();
 
 const fetchCompletedChallenges = async () => {
-	const url = `${BASE_URL}/${USER}/code-challenges/completed`;
+	const url = `${BASE_URL}/${USER}/${CODE_CHALLENGE}`;
 
 	try {
 		const res = await axios.get(url);
@@ -51,11 +53,9 @@ const getCompletedNum = async () => {
 		const { challengesArray } = await fetchCompletedChallenges();
 
 		function filteredByLang(lang) {
-			const getLang = challengesArray.filter((res) =>
-				res.completedLanguages.includes(lang),
-			);
-
-			return getLang.length;
+			return challengesArray.filter(({ completedLanguages }) =>
+				completedLanguages.includes(lang),
+			).length;
 		}
 
 		return { filteredByLang };
