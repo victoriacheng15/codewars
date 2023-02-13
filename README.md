@@ -10,13 +10,13 @@ This is my collection of solutions for codewars
 
 ### Progress
 
-I have completed 455 challenges so far!
+I have completed 458 challenges so far!
 
 |  Language  | Rank  | Color  | Score | Total Completed |
 | :--------: | :---: | :----: | :---: | :-------------: |
-| javascript | 3 kyu | blue | 2063 | 449 |
-| typescript | 5 kyu | yellow | 338 | 114 |
-| python | 5 kyu | yellow | 229 | 114 |
-| go | 6 kyu | yellow | 98 | 49 |
-| sql | 7 kyu | white | 46 | 23 |
+| javascript | 3 kyu | blue | 2071 | 453 |
+| typescript | 5 kyu | yellow | 370 | 130 |
+| python | 5 kyu | yellow | 271 | 135 |
+| go | 6 kyu | yellow | 120 | 60 |
+| sql | 7 kyu | white | 56 | 28 |
 		        
