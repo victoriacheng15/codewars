@@ -1,20 +1,24 @@
-/* 
-Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+import { describe, expect, it } from "vitest";
 
-Examples
-"This is an example!" ==> "sihT si na !elpmaxe"
-"double  spaces"      ==> "elbuod  secaps"
-*/
+// export function reverseWords(str: string): string {
+// 	const arr = str.split(" ");
+// 	const revWord = (word: string) =>
+// 		[...word].reduce((output, char) => {
+// 			output = char + output;
+// 			return output;
+// 		}, "");
+
+// 	return arr.map(revWord).join(" ");
+// }
 
 export function reverseWords(str: string): string {
-	const arr = str.split(" ");
-	const revWord = (word: string) =>
-		[...word].reduce((output, char) => {
-			output = char + output;
-			return output;
-		}, "");
+	const wordArr = str.split(" ");
 
-	return arr.map(revWord).join(" ");
+	return wordArr.reduce((output, word, index) => {
+		const revWord = word.split("").reverse().join("");
+
+		return index === 0 ? output + revWord : `${output} ${revWord}`;
+	},"")
 }
 
 describe("reverse word", () => {
