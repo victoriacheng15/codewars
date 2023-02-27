@@ -1,0 +1,30 @@
+name: format
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: latest
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "pnpm"
+
+      - name: install and run rome tool
+        run: |
+          pnpm install rome
+          pnpm rome:run
+
+      - name: commit change
+        uses: stefanzweifel/git-auto-commit-action@v4.15.2
+        with:
+          commit_message: "style: the code has been formatted by rome!"
+          branch: ${{ github.head_ref }}
