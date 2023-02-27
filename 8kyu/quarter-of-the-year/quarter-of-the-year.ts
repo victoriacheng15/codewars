@@ -1,3 +1,3 @@
 export function quarterOf(month: number): number {
-  return Math.ceil(month / 3)
+	return Math.ceil(month / 3);
 }

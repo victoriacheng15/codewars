@@ -1,5 +1,5 @@
 class SmallestIntegerFinder {
-  findSmallestInt(args) {
-    return Math.min.apply(null, args);
-  }
+	findSmallestInt(args) {
+		return Math.min.apply(null, args);
+	}
 }

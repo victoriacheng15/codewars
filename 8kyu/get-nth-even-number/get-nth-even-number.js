@@ -1,3 +1,3 @@
-function nthEven(n){
-  return (n - 1) * 2
- }
+function nthEven(n) {
+	return (n - 1) * 2;
+}

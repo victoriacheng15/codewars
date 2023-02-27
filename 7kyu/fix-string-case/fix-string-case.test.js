@@ -20,17 +20,16 @@ function solve(s) {
 	return lowerCount >= upperCount ? s.toLowerCase() : s.toUpperCase();
 }
 
-
 describe("fix-string-case", () => {
 	const tests = [
 		["coDe", "code"],
 		["CODe", "CODE"],
 		["coDE", "code"],
-	]
+	];
 
-	for(const [s, expected] of tests) {
+	for (const [s, expected] of tests) {
 		it(`${s} -> ${expected}`, () => {
 			expect(solve(s)).toBe(expected);
 		});
 	}
-})
+});

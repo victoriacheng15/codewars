@@ -8,7 +8,7 @@
     "rome:apply": "pnpm exec rome check ./8kyu ./7kyu ./6kyu ./5kyu ./4kyu --apply",
     "rome:format": "pnpm exec rome format ./8kyu ./7kyu ./6kyu ./5kyu ./4kyu",
     "rome:write": "pnpm exec rome format ./8kyu ./7kyu ./6kyu ./5kyu ./4kyu --write",
-    "rome:run": "pnpm rome:format && pnpm rome:write"
+    "rome:run": "pnpm rome:apply && pnpm rome:write"
   },
   "keywords": [],
   "author": "",

@@ -10,9 +10,9 @@ function converter(mpg) {
 describe("convert miles to km", () => {
 	const tests = [
 		[12, 4.25],
-		[24, 8.50],
+		[24, 8.5],
 		[36, 12.74],
-	]
+	];
 
 	for (const [mpg, output] of tests) {
 		it(`converts ${mpg} miles to ${output} km`, () => {

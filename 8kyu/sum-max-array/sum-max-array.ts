@@ -1,3 +1,3 @@
 export function sumMix(x: any[]): number {
-  return x.map(Number).reduce((acc, curr) => acc + curr, 0)
+	return x.map(Number).reduce((acc, curr) => acc + curr, 0);
 }

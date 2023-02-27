@@ -1,3 +1,3 @@
 function distinct(a) {
-  return [...new Set(a)];
+	return [...new Set(a)];
 }

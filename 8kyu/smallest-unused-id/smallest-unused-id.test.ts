@@ -2,19 +2,19 @@ import { describe, expect, it } from "vitest";
 
 export function nextId(ids: number[]): number {
 	const used = new Set(ids);
-  let num = 0;
+	let num = 0;
 
-  // while (used.has(num)) {
-  //   num++;
-  // }
+	// while (used.has(num)) {
+	//   num++;
+	// }
 
 	for (const id of ids) {
-    if (id === num) {
-      num++;
-    }
-  }
+		if (id === num) {
+			num++;
+		}
+	}
 
-  return num;
+	return num;
 }
 
 describe("next id", () => {
