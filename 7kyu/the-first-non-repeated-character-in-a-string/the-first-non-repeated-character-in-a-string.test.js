@@ -11,7 +11,7 @@ import { describe, expect, it } from "vitest";
 // }
 
 function firstNonRepeated(s) {
-	return [...s].find(char => s.indexOf(char) === s.lastIndexOf(char));
+	return [...s].find((char) => s.indexOf(char) === s.lastIndexOf(char));
 }
 
 describe("first non repeated", () => {

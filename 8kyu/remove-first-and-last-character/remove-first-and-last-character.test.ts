@@ -1,4 +1,4 @@
-import {describe, expect, it} from "vitest";
+import { describe, expect, it } from "vitest";
 
 export function removeChar(str: string): string {
 	return str.slice(1, str.length - 1);

@@ -1,3 +1,3 @@
 export function rowSumOddNumbers(n: number): number {
-  return n ** 3
+	return n ** 3;
 }

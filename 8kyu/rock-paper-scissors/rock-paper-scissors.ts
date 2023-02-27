@@ -1,5 +1,5 @@
-export function rps(p1: string, p2: string): string{
-  switch (p1 + p2) {
+export function rps(p1: string, p2: string): string {
+	switch (p1 + p2) {
 		case "scissorspaper":
 		case "rockscissors":
 		case "paperrock": {

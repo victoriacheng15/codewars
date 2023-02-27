@@ -1,3 +1,3 @@
 export function twiceAsOld(dadYearsOld: number, sonYearsOld: number): number {
-  return Math.abs(dadYearsOld - sonYearsOld * 2);
+	return Math.abs(dadYearsOld - sonYearsOld * 2);
 }

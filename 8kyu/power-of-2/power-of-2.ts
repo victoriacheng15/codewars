@@ -8,7 +8,7 @@
 // }
 
 export function powersOfTwo(n: number): number[] {
-  return [...Array(n + 1).keys()].map((num) => 2 ** num);
+	return [...Array(n + 1).keys()].map((num) => 2 ** num);
 }
 
 console.log(powersOfTwo(2));

@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 
 export function invert(array: number[]): number[] {
-	return array.length ? array.map(num => -num) : [];
+	return array.length ? array.map((num) => -num) : [];
 }
 
 describe("invert value", () => {

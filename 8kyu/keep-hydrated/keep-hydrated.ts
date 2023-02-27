@@ -1,3 +1,3 @@
 export function litres(time: number): number {
-  return Math.floor(time / 2);
+	return Math.floor(time / 2);
 }

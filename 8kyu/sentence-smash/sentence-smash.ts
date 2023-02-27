@@ -1,3 +1,3 @@
-export function smash (words: string[]): string {
-  return words.length ? words.join(" ") : ""
-};
+export function smash(words: string[]): string {
+	return words.length ? words.join(" ") : "";
+}

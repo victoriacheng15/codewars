@@ -18,7 +18,7 @@ export function reverseWords(str: string): string {
 		const revWord = word.split("").reverse().join("");
 
 		return index === 0 ? output + revWord : `${output} ${revWord}`;
-	},"")
+	}, "");
 }
 
 describe("reverse word", () => {

@@ -1,4 +1,4 @@
-import { describe, expect, it} from "vitest"
+import { describe, expect, it } from "vitest";
 
 /* 
 - early return for if m is equal to 0 or a negative integer

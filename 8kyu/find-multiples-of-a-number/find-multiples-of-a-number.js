@@ -9,8 +9,7 @@
 // }
 
 function findMultiples(integer, limit) {
-  return [...Array(limit + 1).keys()].slice(1).filter(i => i % integer === 0)
+	return [...Array(limit + 1).keys()].slice(1).filter((i) => i % integer === 0);
 }
-
 
 console.log(findMultiples(5, 25));

@@ -10,7 +10,7 @@
 // }
 
 export function between(a: number, b: number): number[] {
-  return [...Array(b - a +1).keys()].map(i => a + i)
+	return [...Array(b - a + 1).keys()].map((i) => a + i);
 }
 
-console.log(between(-2, 2))
+console.log(between(-2, 2));
