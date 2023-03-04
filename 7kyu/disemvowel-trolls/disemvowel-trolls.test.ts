@@ -1,4 +1,4 @@
-import {describe, expect, it} from "vitest";
+import { describe, expect, it } from "vitest";
 export class Kata {
 	static disemvowel(str: string): string {
 		const vowels = /[aeiou]/gi;
